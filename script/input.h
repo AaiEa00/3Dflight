@@ -5,4 +5,4 @@
 bool existsGamepad(void);
 
 // ƒvƒŒƒCƒ„[‚Ö‚Ì“ü—Í
-void inputPlayer(VECTOR* position);
+void inputPlayer(gameObject* position);

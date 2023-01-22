@@ -22,4 +22,4 @@ typedef struct {
 camera* initializeCamera(void);
 
 // カメラデータの更新
-void updateCamera(camera* cam, listNode* player);
+void updateCamera(camera* cam, gameObject player);

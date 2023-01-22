@@ -36,6 +36,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	// カメラデータの初期化
 	camera* cam = initializeCamera();
 
+	//SetJoypadDeadZone(DX_INPUT_PAD1, )
+
 	// メインループ
 	while (ProcessMessage() == NORMAL_END && ClearDrawScreen() == NORMAL_END)
 	{
@@ -57,7 +59,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 		for (int i = 0; i < (int)game::gameNum; i++)
 			update[i](searchNode(list, (game)i));
 
-		updateCamera(cam, searchNode(list, game::player));
+		updateCamera(cam, searchNode(list, game::player)->object);
 		// リストの中身を描画
 		draw(list);
 

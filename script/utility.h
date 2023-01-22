@@ -25,7 +25,10 @@
 
 // プレイヤー
 #define	PLAYER_MODEL_PATH			"resource/Stealth_Bomber.mv1"		// プレイヤーのモデルへのパス
-#define	PLAYER_MOVE_SPEED			0.001f							// プレイヤーの移動速度
+#define	PLAYER_MODEL_ROTATION		(VGet(0.0f, DX_PI_F, 0.0f))		// プレイヤーモデルの初期回転値
+#define	PLAYER_MOVE_SPEED			20.0f							// プレイヤーの移動速度
+#define	PLAYER_ROTATE_SPEED			0.001f							// プレイヤーの回転速度
+#define	PLAYER_ACCELERATION			0.002f							// プレイヤーの加速度
 
 // モデル
 #define	MISSILE_MODEL_PATH			"resource/CruiseMissile.mv1"		// ミサイルのモデルへのパス
@@ -33,4 +36,4 @@
 // カメラ
 #define DRAWABLE_RANGE_NEAREST		1.0f							// カメラで描画可能な最短距離
 #define DRAWABLE_RANGE_FARTHEST		1000.0f							// カメラで描画可能な最長距離
-#define	CAMERA_INITIAL_POSITION		(VGet(0.0f, 25.0f, 45.0f))		// カメラの初期位置
+#define	CAMERA_INITIAL_POSITION		(VGet(0.0f, 25.0f, -45.0f))		// カメラの初期位置

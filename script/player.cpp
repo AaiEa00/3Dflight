@@ -10,7 +10,7 @@ gameObject initializePlayer(void)
 
 	player.model = MV1LoadModel(PLAYER_MODEL_PATH);
 	player.position = ZERO_VECTOR;
-	player.rotation = ZERO_VECTOR;
+	player.rotation = PLAYER_MODEL_ROTATION;
 	player.type = game::player;
 
 	return player;
@@ -22,6 +22,7 @@ gameObject initializePlayer(void)
 /// <param name="node">プレイヤーデータ</param>
 void updatePlayer(listNode* node)
 {
-	inputPlayer(&node->object.position);
+	inputPlayer(&node->object);
 	MV1SetPosition(node->object.model, node->object.position);
+	MV1SetRotationXYZ(node->object.model, node->object.rotation);
 }

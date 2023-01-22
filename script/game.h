@@ -14,7 +14,7 @@ initializingFunction initialize[(int)game::gameNum] = {
 /// <summary>
 /// ó‘ÔXVŠÖ”
 /// </summary>
-typedef gameObject(*updatingFunction)(listNode*);
+typedef void(*updatingFunction)(listNode*);
 updatingFunction update[(int)game::gameNum] = {
 	updatePlayer,
 	updateMissile
